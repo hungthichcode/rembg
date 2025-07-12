@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Background v2 by Nguyễn Mạnh Hùng</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Remove Background v2 by Nguyễn Mạnh Hùng</h1>
+        
+        <!-- Upload Image -->
+        <input type="file" id="uploadImage" accept="image/*">
+        <button onclick="processImage()">Xử lý ảnh</button>
+
+        <!-- Image Display -->
+        <div class="image-container" id="resultContainer"></div>
+        
+        <!-- Background Color Selection -->
+        <label for="backgroundColor">Chọn màu nền:</label>
+        <select id="backgroundColor">
+            <option value="#2196f3">Xanh Đậm (Ảnh Thẻ)</option>
+            <option value="#ffffff">Nền Trắng (Ảnh Thẻ)</option>
+            <option value="#03a9f4">Xanh Nhạt (Ảnh Thẻ)</option>
+            <option value="#009688">Xanh Đậm</option>
+            <option value="#4caf50">Xanh Lá Cây</option>
+            <option value="#8bc34a">Xanh Nõn Chuối</option>
+        </select>
+        <button onclick="changeBackground()">Đổi nền</button>
+        
+        <!-- Resize Options -->
+        <h3>Thay đổi kích thước ảnh</h3>
+        <label for="resizeWidth">Chiều rộng:</label>
+        <input type="number" id="resizeWidth" placeholder="Nhập chiều rộng">
+        
+        <label for="resizeHeight">Chiều cao:</label>
+        <input type="number" id="resizeHeight" placeholder="Nhập chiều cao">
+        
+        <label for="unit">Đơn vị:</label>
+        <select id="unit">
+            <option value="cm">Centimeter</option>
+            <option value="mm">Millimeter</option>
+        </select>
+        
+        <button onclick="resizeImage()">Thay đổi kích thước</button>
+
+        <!-- Quality Options -->
+        <h3>Tải ảnh</h3>
+        <label for="quality">Chọn chất lượng:</label>
+        <select id="quality">
+            <option value="default">Mặc định</option>
+            <option value="high">Chất lượng cao</option>
+        </select>
+        <button onclick="downloadImage()">Tải ảnh xuống</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

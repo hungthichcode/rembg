@@ -1,0 +1,117 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Style */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Image Display */
+.image-container {
+    margin-top: 20px;
+}
+
+#processedImage {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+input[type="number"], input[type="file"], select, button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Button Style */
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+    }
+
+    #processedImage {
+        max-width: 80%;
+    }
+
+    /* Form Elements */
+    input[type="number"], input[type="file"], select, button {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /* Two-column layout for larger screens */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container, .form-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px 0;
+    }
+
+    .form-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    label {
+        font-size: 1.1em;
+    }
+
+    /* Resize inputs and buttons */
+    input[type="number"], input[type="file"], select, button {
+        width: 45%;
+        max-width: 200px;
+    }
+}
