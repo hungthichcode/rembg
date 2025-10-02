@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="mt-4 text-center text-sm text-gray-500">
-                        Supports JPG, PNG, WEBP (Max 5MB)
+                        Supports JPG, PNG, WEBP (Max 20MB)
                     </div>
                 </div>
 
@@ -206,8 +206,8 @@
                     return;
                 }
                 
-                if (file.size > 5 * 1024 * 1024) {
-                    alert('File size should be less than 5MB.');
+                if (file.size > 20 * 1024 * 1024) {
+                    alert('File size should be less than 20MB.');
                     return;
                 }
 
