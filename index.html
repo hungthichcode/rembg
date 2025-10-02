@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="mt-4 text-center text-sm text-gray-500">
-                        Supports JPG, PNG, WEBP (Max 20MB)
+                        Supports JPG, PNG, WEBP (Max 50MB)
                     </div>
                 </div>
 
@@ -206,8 +206,8 @@
                     return;
                 }
                 
-                if (file.size > 20 * 1024 * 1024) {
-                    alert('File size should be less than 20MB.');
+                if (file.size > 50 * 8000 * 6250) {
+                    alert('File size should be less than 50MB.');
                     return;
                 }
 
@@ -239,7 +239,7 @@
                 fetch('https://api.remove.bg/v1.0/removebg', {
                     method: 'POST',
                     headers: {
-                        'X-Api-Key': 'dNJQK3iKsebYiH8Amhdk77p7'  // Your API key
+                        'X-Api-Key': '7xdxRSW4y8tJVtUadF3e7irw'  // Your API key
                     },
                     body: formData
                 })
